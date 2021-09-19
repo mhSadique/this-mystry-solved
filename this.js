@@ -147,12 +147,19 @@ newFunc();
 
 
 // How to find the lost 'this' in a callback?
-// In other words, how to call a function in a certain context?
+// In other words, how to call a function in a certain context? 
+// When there is a call back function inside another function, 
+// 'this' inside that callback function is 'window' or/and 'undefined' in strict mode
+// we can set 'this- the context' in which the function can be called 
+// by using several methods
+// 
 
 
   //////////////////////////////////////////////////////
  //////////// explicit binding - Example 02 ///////////
 //////////////////////////////////////////////////////
+
+// USING bind()
 
 const js = {
     name: 'JavaScript',
@@ -169,6 +176,8 @@ js.printLibraries()
  //////////// explicit binding - Example 03 ///////////
 //////////////////////////////////////////////////////
 
+// USING arrow function
+
 const js = {
     name: 'JavaScript',
     libraries: ['React', 'Angular', 'Vue'],
@@ -184,6 +193,8 @@ js.printLibraries()
   //////////////////////////////////////////////////////
  //////////// explicit binding - Example 04 ///////////
 //////////////////////////////////////////////////////
+
+// Assigning 'this' to a variable and use that variable as 'this'
 
 const js = {
     name: 'JavaScript',
