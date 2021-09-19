@@ -8,9 +8,7 @@
 // 04. window binding 
 
 
-  /////////////////////////////////////////////////////
  //////////// implicit binding - Example 01 //////////
-/////////////////////////////////////////////////////
 let sam = {
     name: "Sam",
     age: 34,
@@ -23,9 +21,7 @@ sam.printName() // 'this' is the object before the 'dot' in the dot notation whi
 
 
 
-  //////////////////////////////////////////////////////
  //////////// implicit binding - Example 02 ///////////
-//////////////////////////////////////////////////////
 let createPrintPlayerNameFunction = function(obj) {
     obj.printPlayerName = function() {
         console.log(this.name); // 'this' is the object before the 'dot' in the dot notation
@@ -49,9 +45,7 @@ tamim.printPlayerName(); // 'this' is the object before the 'dot' in the dot not
 sakib.printPlayerName(); // 'this' is the object before the 'dot' in the dot notation which is 'sakib'
 
 
-  //////////////////////////////////////////////////////
  //////////// implicit binding - Example 03 ///////////
-//////////////////////////////////////////////////////
 let person = function (name, age) {
     return {
         name: name,
@@ -66,9 +60,7 @@ let mushfiq = person('Mushfiq', 32);
 mushfiq.printName(); // 'this' is the object before the 'dot' in the dot notation which is 'mushfiq'
 
 
-  //////////////////////////////////////////////////////
  //////////// implicit binding - Example 04 ///////////
-//////////////////////////////////////////////////////
 let person2 = function (name, age) {
     return {
         name: name,
@@ -89,9 +81,7 @@ let rafiq = person2('Mushfiq', 32);
 rafiq.father.printName(); // 'this' is the object before the 'dot' in the dot notation which is 'rafiq.father'
 
 
-  //////////////////////////////////////////////////////
  //////////// explicit binding - Example 01 ///////////
-//////////////////////////////////////////////////////
 
 // ****** Remember, 'this' keyword is used to re-use a function in different contexts
 
@@ -155,9 +145,7 @@ newFunc();
 // 
 
 
-  //////////////////////////////////////////////////////
  //////////// explicit binding - Example 02 ///////////
-//////////////////////////////////////////////////////
 
 // USING bind()
 
@@ -172,9 +160,7 @@ const js = {
 };
 js.printLibraries()
 
-  //////////////////////////////////////////////////////
  //////////// explicit binding - Example 03 ///////////
-//////////////////////////////////////////////////////
 
 // USING arrow function
 
@@ -190,9 +176,7 @@ const js = {
 js.printLibraries()
 
 
-  //////////////////////////////////////////////////////
  //////////// explicit binding - Example 04 ///////////
-//////////////////////////////////////////////////////
 
 // Assigning 'this' to a variable and use that variable as 'this'
 
@@ -209,9 +193,7 @@ const js = {
 js.printLibraries()
 
 
-  //////////////////////////////////////////////////////
  //////////// new binding - Example 01 ////////////////
-//////////////////////////////////////////////////////
 
 
 
@@ -226,9 +208,7 @@ function Person(name, age) {
 let fahad = new Person('Fahad', 43);
 
 
-  //////////////////////////////////////////////////////
  //////////// window binding - Example 01 /////////////
-//////////////////////////////////////////////////////
 
 // without 'use strict'
 // 'use strict' can be used to prevent the default behaviour
@@ -241,4 +221,4 @@ let showName = function () {
     console.log(this.name); // undefined
 };
 
-showName();
+showName(); 
